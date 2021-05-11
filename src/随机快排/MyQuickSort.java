@@ -3,7 +3,7 @@ package 随机快排;
 import java.util.Arrays;
 
 /**
- * @author W.Wen
+ * @author 王文
  * @version : V1.0
  * @className: MyQuickSort
  * @description: 手撕快排

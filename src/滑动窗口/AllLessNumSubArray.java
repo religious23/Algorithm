@@ -38,20 +38,25 @@ public class AllLessNumSubArray {
                 }
                 R++;
             }
-             if(qmin.peekFirst()==L){
-                qmin.pollFirst();
-            }//R是最后一个达标位置的再下一个，第一个违规的位置
-            res+=R-L;
+            //R是最后一个达标位置的再下一个，第一个违规的位置
+            res += R - L;
 
-            if(qmin.peekFirst()==L){
+            if (qmin.peekFirst() == L) {
                 qmin.pollFirst();
             }
-            if(qmax.peekFirst()==L){
+            if (qmax.peekFirst() == L) {
                 qmax.pollFirst();
             }
 
             L++;
         }
         return res;
+    }
+
+
+    public static void main(String[] args) {
+        int[] arr = {2, 4, 5, 7, 4, 1, 8, 12, 6, 4, 15};
+        int num = 5;
+        System.out.println(getNum(arr, num));
     }
 }

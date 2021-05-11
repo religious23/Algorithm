@@ -50,7 +50,7 @@ public class SlidingWindow {
 
     public static void main(String[] args) {
         int[] arr={3,4,2,5,6,7,3,8,5};
-        int w=4;
+        int w=5;
         int[] maxWindow = getMaxWindow(arr, w);
         System.out.println(Arrays.toString(maxWindow));
     }
