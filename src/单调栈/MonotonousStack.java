@@ -51,7 +51,7 @@ public class MonotonousStack {
         int[] arr = {2, 4, 1, 5, 7, 8, 95, 12, 41, 2, 3, 5, 2, 32, 12};
         int[][] ints = getNearLess(arr);
         for (int[] anInt : ints) {
-            System.out.println(Arrays.toString(anInt));
+            System.out.print(Arrays.toString(anInt));
         }
     }
 }
