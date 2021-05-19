@@ -59,8 +59,8 @@ public class KMP {
     }
 
     public static void main(String[] args) {
-        String str="seafhtrfdx13123jdhgkso";
-        String match="rfdx13123jd";
+        String str="seafekge123jdhgkso";
+        String match="ekge123jdh";
         System.out.println(getIndexOf(str, match));
     }
 }
