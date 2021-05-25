@@ -37,6 +37,7 @@ public class NQueens {
     //record[0..i-1]你需要看，record[i...]不需要看
     //返回i行皇后，放在了j列，是否有效
     //不用判断行，只需判断列和斜线
+
     private static boolean isValid(int[] record, int i, int j) {
         for (int k = 0; k < i; k++) {
             if (record[k] == j || Math.abs(record[k] - j) == Math.abs(k - i)) {
@@ -48,6 +49,7 @@ public class NQueens {
 
     //n皇后问题的优化版实现
     //时间复杂度不变，加快了常量时间
+
     public static int num2(int n) {
         if (n < 1 || n > 32) {
             return 0;
@@ -79,7 +81,7 @@ public class NQueens {
     }
 
     public static void main(String[] args) {
-        int num = 15;
+        int num = 13;
         long start2 = System.currentTimeMillis();
         int numbers2 = num2(num);
         long end2 = System.currentTimeMillis();
@@ -89,6 +91,6 @@ public class NQueens {
         int numbers1 = num1(num);
         long end1 = System.currentTimeMillis();
         System.out.println("方法1：所用时间："+(end1-start1));
-        System.out.println("方法2："+num + "皇后问题的解的个数有：" + numbers1 + "个");
+        System.out.println("方法1："+num + "皇后问题的解的个数有：" + numbers1 + "个");
     }
 }

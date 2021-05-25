@@ -7,6 +7,12 @@ package kmp;
  * @description: KMP算法
  * @date 2021-05-16
  */
+
+/**
+ * 对KMP算法的理解
+ * 1：从左到右的尝试
+ * 2：让每一个位置的比对都具有意义（回跳的力度降到最低）
+ */
 public class KMP {
     public static int getIndexOf(String s, String m) {
         if (s == null || m == null || m.length() < 1 || s.length() < m.length()) {
