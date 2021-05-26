@@ -47,9 +47,9 @@ public class Dijkstra {
         for (Map.Entry<Node, Integer> entry : distanceMap.entrySet()) {
             Node node = entry.getKey();
             int distance = entry.getValue();
-            if(!touchedNodes.contains(node)&&distance<minDistance){
-                minNode=node;
-                minDistance=distance;
+            if (!touchedNodes.contains(node) && distance < minDistance) {
+                minNode = node;
+                minDistance = distance;
             }
         }
         return minNode;

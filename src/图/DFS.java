@@ -10,6 +10,11 @@ import java.util.Stack;
  * @description: 图的深度优先遍历
  * @date 2021-03-15
  */
+
+/**
+ *自己的理解
+ * 将节点压入栈中，利用set的不重复性辅助，完成图的深度遍历
+ */
 public class DFS {
     public static void dfs(Node node) {
         if (node == null) {
