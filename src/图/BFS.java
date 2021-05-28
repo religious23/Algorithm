@@ -11,6 +11,10 @@ import java.util.Queue;
  * @description: 图的宽度优先遍历
  * @date 2021-03-15
  */
+
+/**
+ * 自己的理解 利用队列 依此将改层的节点拿出
+ */
 public class BFS {
     public static void bfs(Node node) {
         if (node == null) {

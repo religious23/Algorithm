@@ -55,7 +55,7 @@ public class MinAddNum {
     }
 
     public static void main(String[] args) {
-        String str="1113";
+        String str="11234123113214";
         System.out.println(getMinNum(str));
     }
 }
