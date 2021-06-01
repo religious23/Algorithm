@@ -12,7 +12,6 @@ import java.util.Map;
  * @date 2021-03-24
  */
 public class Dijkstra {
-
     public static HashMap<Node, Integer> dijkstra1(Node from) {
         //从head出发到所有点的最小距离
         //key : 从head出发到达key
@@ -54,6 +53,4 @@ public class Dijkstra {
         }
         return minNode;
     }
-
-
 }
