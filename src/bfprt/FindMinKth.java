@@ -147,8 +147,8 @@ public class FindMinKth {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 63, 23, 6, 4, 12, 52, 6, 2, 4, 9};
-        int k = 1;
+        int[] arr = {0,2,1,0};
+        int k = 4;
         System.out.println(getMinKth(arr, k));
     }
 }
