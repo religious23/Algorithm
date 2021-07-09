@@ -9,19 +9,19 @@ package 每日一题;
  */
 public class LK20210709 {
     public static int majorityElement(int[] nums) {
-        int mole = 0;
+        int moore = 0;
         int[] dp = new int[1];
         for (int num : nums) {
-            if (mole == 0) {
+            if (moore == 0) {
                 dp[0] = num;
-                mole++;
+                moore++;
                 continue;
             }
             if (num != dp[0]) {
-                mole--;
+                moore--;
                 continue;
             }
-            mole++;
+            moore++;
         }
         boolean falg = decide(nums, dp[0]);
         return falg ? dp[0] : -1;
