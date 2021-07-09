@@ -10,21 +10,21 @@ package 每日一题;
 public class LK20210709 {
     public static int majorityElement(int[] nums) {
         int moore = 0;
-        int[] dp = new int[1];
+        int temp=0;
         for (int num : nums) {
             if (moore == 0) {
-                dp[0] = num;
+                temp = num;
                 moore++;
                 continue;
             }
-            if (num != dp[0]) {
+            if (num != temp) {
                 moore--;
                 continue;
             }
             moore++;
         }
-        boolean falg = decide(nums, dp[0]);
-        return falg ? dp[0] : -1;
+        boolean falg = decide(nums, temp);
+        return falg ? temp : -1;
     }
 
     private static boolean decide(int[] nums, int i) {
