@@ -8,7 +8,6 @@ package 常见题目;
  * @date 2021-07-31
  */
 
-import java.util.Arrays;
 
 /**
  * 括号有效配对是指：
