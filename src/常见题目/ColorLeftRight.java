@@ -1,0 +1,48 @@
+package 常见题目;
+
+/**
+ * @author 王文
+ * @version : V1.0
+ * @className: ColorLeftRight
+ * @description: 两种颜色转换问题
+ * @date 2021-08-10
+ */
+
+/**
+ * 有一些排成一行的正方形。每个正方形已经被染成红色或者绿色。现在可以选择任意一个
+ * 正方形然后用这两种颜色的任意一种进行染色，这个正方形的颜色将会被覆盖。目标是完成染色之后
+ * 每个红色R都比每个绿色G距离最左测近。返回最少需要涂染几个正方形
+ */
+
+public class ColorLeftRight {
+    public int colorLeftRight(String str) {
+        char[] s = str.toCharArray();
+        int n = s.length;
+        int numG = 0;
+        for (char c : s) {
+            if (c == 'G') {
+                numG++;
+            }
+        }
+        int numR = n - numG;
+        int temp1 = 0;
+        int temp2 = 0;
+        int ans = Math.min(numG, numR);
+        for (char c : s) {
+            if (c == 'R') {
+                temp1++;
+            } else {
+                temp2++;
+            }
+            int res = temp2 + (numR - temp1);
+            ans = Math.min(ans, res);
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        String str = "RGRGRGGRRRGGG";
+        ColorLeftRight colorLeftRight = new ColorLeftRight();
+        System.out.println(colorLeftRight.colorLeftRight(str));
+    }
+}
