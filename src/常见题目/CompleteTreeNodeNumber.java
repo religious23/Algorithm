@@ -44,10 +44,10 @@ public class CompleteTreeNodeNumber {
 
         if (getSize(head.right) == h - 1) {
             res = process(head.right, h - 1);
-            return (int) (Math.pow(2, (h - 1)) + res);
+            return ((1 << (h - 1)) + res);
         }
         res = process(head.left, h - 1);
-        return (int) (Math.pow(2, (h - 2)) + res);
+        return ((1 << (h - 2)) + res);
     }
 
     private static int getSize(Node head) {
@@ -73,8 +73,8 @@ public class CompleteTreeNodeNumber {
         node2.left = node4;
         node2.right = node5;
         node3.left = node6;
-        node3.right=node7;
-        node4.left=node8;
+        node3.right = node7;
+        node4.left = node8;
 
         System.out.println(getTreeNumber(node1));
     }
