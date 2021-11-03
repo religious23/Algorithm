@@ -67,21 +67,25 @@ public class TrappingRainWaterII {
         while (!queue.isEmpty()) {
             Head head = queue.poll();
             max = Math.max(max, head.value);
-            if (head.col > 0 && !isEnter[head.col - 1][head.row]) {
-                res += Math.max(max - heightMap[head.col - 1][head.row], 0);
-                queue.add(new Head(heightMap[head.col - 1][head.row], head.col - 1, head.row));
+            if (head.col > 0 && !isEnter[head.row][head.col - 1]) {
+                res += Math.max(max - heightMap[head.row][head.col - 1], 0);
+                isEnter[head.row][head.col - 1]=true;
+                queue.add(new Head(heightMap[head.row][head.col - 1], head.row, head.col - 1));
             }
-            if (head.col < heightMap[0].length - 1 && !isEnter[head.col + 1][head.row]) {
-                res += Math.max(max - heightMap[head.col + 1][head.row], 0);
-                queue.add(new Head(heightMap[head.col + 1][head.row], head.col + 1, head.row));
+            if (head.col < heightMap[0].length - 1 && !isEnter[head.row][head.col + 1]) {
+                res += Math.max(max - heightMap[head.row][head.col + 1], 0);
+                isEnter[head.row][head.col + 1]=true;
+                queue.add(new Head(heightMap[head.row][head.col + 1], head.row, head.col + 1));
             }
-            if (head.row > 0 && !isEnter[head.col][head.row - 1]) {
-                res += Math.max(max - heightMap[head.col][head.row - 1], 0);
-                queue.add(new Head(heightMap[head.col][head.row - 1], head.col, head.row - 1));
+            if (head.row > 0 && !isEnter[head.row - 1][head.col]) {
+                res += Math.max(max - heightMap[head.row - 1][head.col], 0);
+                isEnter[head.row - 1][head.col]=true;
+                queue.add(new Head(heightMap[head.row - 1][head.col], head.row - 1,head.col));
             }
-            if (head.col < heightMap.length - 1 && !isEnter[head.col][head.row + 1]) {
-                res += Math.max(max - heightMap[head.col + 1][head.row], 0);
-                queue.add(new Head(heightMap[head.col][head.row + 1], head.col, head.row + 1));
+            if (head.row < heightMap.length - 1 && !isEnter[head.row + 1][head.col]) {
+                res += Math.max(max - heightMap[head.row + 1][head.col], 0);
+                isEnter[head.row + 1][head.col]=true;
+                queue.add(new Head(heightMap[head.row + 1][head.col], head.row + 1, head.col));
             }
         }
         return res;
@@ -90,5 +94,10 @@ public class TrappingRainWaterII {
 
     private static boolean[][] getIsEnter(int[][] heightMap) {
         return new boolean[heightMap.length][heightMap[0].length];
+    }
+
+    public static void main(String[] args) {
+        int[][] arr = {{1, 4, 3, 1, 3, 2}, {3, 2, 1, 3, 2, 4}, {2, 3, 3, 2, 3, 1}};
+        System.out.println(trapRainWater(arr));
     }
 }
