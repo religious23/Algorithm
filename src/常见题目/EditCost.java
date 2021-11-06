@@ -38,6 +38,6 @@ public class EditCost {
 
     public static void main(String[] args) {
         int[] arr={1,3,2};
-        System.out.println(getEditCost("1", "2", arr));
+        System.out.println(getEditCost("1", "21324214", arr));
     }
 }
