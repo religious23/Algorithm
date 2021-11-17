@@ -13,13 +13,13 @@ public class LK20211117 {
     public int maxProduct(String[] words) {
         int res = 0;
         HashMap<String, int[]> map = new HashMap<>();
-        for (int i = 0; i < words.length; i++) {
+        for (String word : words) {
             int[] arr = new int[26];
-            char[] chars = words[i].toCharArray();
+            char[] chars = word.toCharArray();
             for (char aChar : chars) {
                 arr[aChar - 'a'] = 1;
             }
-            map.put(words[i], arr);
+            map.put(word, arr);
         }
         for (int i = 0; i < words.length - 1; i++) {
             for (int j = i + 1; j < words.length; j++) {
