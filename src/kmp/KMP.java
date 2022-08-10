@@ -10,7 +10,7 @@ package kmp;
 
 /**
  * 对KMP算法的理解
- * 1：从左到右的尝试
+ * 1：从左到右
  * 2：让每一个位置的比对都具有意义（回跳的力度降到最低）
  */
 public class KMP {
@@ -65,8 +65,8 @@ public class KMP {
     }
 
     public static void main(String[] args) {
-        String str="seafekge123jdhgkso";
-        String match="ekge123jdh";
+        String str="seafekgse1243jdhsgfdgdhgfdfshgdfgsrjsyrjuykugldfgdfekge123jdhgdhfgseshygdmvdfgdghskso";
+        String match="ekge1523jdh";
         System.out.println(getIndexOf(str, match));
     }
 }

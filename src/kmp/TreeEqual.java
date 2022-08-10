@@ -95,7 +95,7 @@ public class TreeEqual {
         int y = 0;
         int[] next = getNextArray(match);
         while (x < str.length && y < match.length) {
-            if (str[x] == match[y]) {
+            if (str[x].equals(match[y])) {
                 x++;
                 y++;
             } else if (next[y] == -1) {
@@ -122,7 +122,7 @@ public class TreeEqual {
         //cn代表，cn位置的字符，是当前和i-1位置比较的字符
         int cn=0;
         while(i<next.length){
-            if(match[i-1]==match[next[i]]){
+            if(match[i - 1].equals(match[next[i]])){
                 next[i++]=++cn;
             }
             else if(cn>0){
