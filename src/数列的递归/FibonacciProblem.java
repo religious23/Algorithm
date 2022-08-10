@@ -4,18 +4,18 @@ package 数列的递归;
  * @author 王文
  * @version : V1.0
  * @className: FibonacciProblem
- * @description: 斐波那契数列
+ * @description: 斐波那契数列(兔子数列)  通项公式（内比公式）
  * @date 2021-05-10
  */
 public class FibonacciProblem {
 
     public static void main(String[] args) {
         long l1 = System.currentTimeMillis();
-        System.out.println(f1(47));
+        System.out.println(f1(45));
         long l2 = System.currentTimeMillis();
         System.out.println(l2 - l1);
         long l3 = System.currentTimeMillis();
-        System.out.println(f2(47));
+        System.out.println(f2(45));
         long l4 = System.currentTimeMillis();
         System.out.println(l4 - l3);
     }

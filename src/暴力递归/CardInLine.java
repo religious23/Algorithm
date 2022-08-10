@@ -1,7 +1,5 @@
 package 暴力递归;
 
-import javax.swing.*;
-import java.sql.SQLOutput;
 
 /**
  * @author W.Wen

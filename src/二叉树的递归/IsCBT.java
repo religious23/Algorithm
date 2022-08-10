@@ -1,4 +1,4 @@
-package 二叉树的递归套路;
+package 二叉树的递归;
 
 import java.util.LinkedList;
 

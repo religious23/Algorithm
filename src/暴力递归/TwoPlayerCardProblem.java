@@ -4,7 +4,7 @@ package 暴力递归;
  * @author W.Wen
  * @version : V1.0
  * @className: TwoPlayerCardProblem
- * @description: 双人纸牌问题  范围上尝试的模型
+ * @description: 双人纸牌问题
  * @date 2021-03-28
  */
 

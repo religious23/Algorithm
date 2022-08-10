@@ -4,7 +4,7 @@ package 动态规划;
  * @author W.Wen
  * @version : V1.0
  * @className: TwoPlayerCardProblem
- * @description: 双人纸牌问题  范围上尝试的模型 动态规划版本
+ * @description: 双人纸牌问题 动态规划版本
  * @date 2021-03-28
  */
 
@@ -82,7 +82,8 @@ public class TwoPlayerCardProblem {
     }
 
     public static void main(String[] args) {
-        int[] arr = {2, 41, 1, 51, 7, 8, 9, 8, 0, 24, 252, 14, 1, 23, 12, 56, 9, 8, 4, 3, 7, 6, 2};
+        //int[] arr = {2, 41, 1, 51, 7, 8, 9, 8, 0, 24, 252, 14, 1, 23, 12, 56, 9, 8, 4, 3, 7, 6, 2};
+        int[] arr = {2, 41, 1, 51};
         long l1 = System.currentTimeMillis();
         String win = getWin(arr);
         long l2 = System.currentTimeMillis();

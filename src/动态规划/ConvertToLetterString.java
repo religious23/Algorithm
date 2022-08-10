@@ -1,6 +1,5 @@
 package 动态规划;
 
-import sun.applet.Main;
 
 /**
  * @author W.Wen
