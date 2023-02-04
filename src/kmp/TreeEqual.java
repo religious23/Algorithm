@@ -119,7 +119,7 @@ public class TreeEqual {
         next[0] = -1;
         next[1] = 0;
         int i=2;
-        //cn代表，cn位置的字符，是当前和i-1位置比较的字符
+        //cn代表，cn位置的，是当前和i-1位置比较的字符
         int cn=0;
         while(i<next.length){
             if(match[i - 1].equals(match[next[i]])){
